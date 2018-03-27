@@ -6,7 +6,23 @@ REQUIREMENTS
 - There can be maximum 40 users in the classes
 - There can be maximum 110 users in the hall
 - The hallway's APs must support people in the offices (how many?)
-- Type of traffic: casual email and web browsing
+- Type of traffic: casual email and web browsing, mainly to provide portable Internet connectivity
+- Additionally, there are two types of users: Student/Staff and Visitors
+
+------------------------------------------------------------------------------------------
+LAYER 1
+
+---------------------------------------------
+TYPE OF NETWORK
+802.11n to support both 5 GHz and 2.4 GHz frequency
+
+---------------------------------------------
+WIRELESS ACCESS POINTS
+- We'll use WAP121 because that's the only thing we know how to use
+- Price: â‚¬64 each at <https://www.amazon.de/Cisco-WAP121-K9-G5-Wireless-N-Rangebooster/dp/B007VKMNLQ>
+
+------------------------------------------------------------------------------------------
+LAYER 3
 
 ---------------------------------------------
 IP ADDRESSING
@@ -14,20 +30,22 @@ IP ADDRESSING
 - Maximum capacity: 20*3 + 40*5 + 110 + 5*6 = 640 users (subjected to change)
 - Suppose each user needs two devices, we need 640*2 = 1280 IP addresses
 - Therefore, we need mask /21 (supporting 2046 unique addresses). Let's choose the private subnet 192.168.0.0 /21
+- There are two VLANs to accomodate two types of users: Student/Staff and Visitors. Each will have a /22 subnet.
 
 ---------------------------------------------
-TYPE OF NETWORK
-802.11n to support both 5 GHz and 2.4 GHz frequency
+DEFAULT GATEWAY
+- There shoud be two routers that act as default gateways using Hot Standby Routing Protocol in case of failure
+
+------------------------------------------------------------------------------------------
+OTHERS
 
 ---------------------------------------------
 SECURITY
-Obviously WPA2 Enterprise. The authentication will be handed to the Wireless Controller server (details below)
+Obviously we will use WPA2 Enterprise. The authentication will be handed to the Wireless Controller server (details below), the main idea is:
+	+ Student/Staff uses XAMK's user database
+	+ Visitors will be handed a pre-shared key (should be placed somewhere close to the entrance)
 
 ---------------------------------------------
-WIRELESS ACCESS POINTS
-- We'll use WAP121 because that's the only thing we know how to use
-- Price: €64 each at <https://www.amazon.de/Cisco-WAP121-K9-G5-Wireless-N-Rangebooster/dp/B007VKMNLQ>
-
 NETWORK MANAGEMENT
 - All APs are managed using a Cisco Virtual Wireless Controller <https://www.cisco.com/c/en/us/products/collateral/wireless/virtual-wireless-controller/data_sheet_c78-714543.html>. Features include:
 	+ Rogue detection
@@ -41,7 +59,7 @@ NETWORK MANAGEMENT
 
 - Requirement: Any x86 server, requiring 2 GB of memory and 8 GB of storage
 
-- Cost: You can buy one license for 5 APs for €444 at <http://www.zones.com/site/product/index.html?id=004322678&page_name=product_alert>
+- Cost: You can buy one license for 5 APs for â‚¬444 at <http://www.zones.com/site/product/index.html?id=004322678&page_name=product_alert>
 
 ---------------------------------------------
 SPEED TESTING
@@ -79,6 +97,8 @@ THINGS TO DO
 - Redundancy plan
 - Use PoE or not?
 - How many offices are in the hallways? How many hallways do we have?
-- Plan the physical connection
-- Plan the channels
+- Plan the physical connection and 
+- Plan the network topology using packet tracer
+- Plan the channels: can separate floors affect each other?
+- Can the wireless network talk to the wired network?
 
