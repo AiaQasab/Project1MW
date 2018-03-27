@@ -1,5 +1,47 @@
+---------------------------------------------
+REQUIREMENTS
+- We want to cover the A, B, and D section
+- The areas of interest can be divided into these categories: the lobbies (3), the classes (5), the hallways (6) and the hall (1)
+- There can be maximum 20 users in the lobbies
+- There can be maximum 40 users in the classes
+- There can be maximum 110 users in the hall
+- The hallway's APs must support people in the offices (how many?)
+- Type of traffic: casual email and web browsing
+
+---------------------------------------------
+IP ADDRESSING
+- Of course we'll need DHCP
+- Maximum capacity: 20*3 + 40*5 + 110 + 5*6 = 640 users (subjected to change)
+- Suppose each user needs two devices, we need 640*2 = 1280 IP addresses
+- Therefore, we need mask /21 (supporting 2046 unique addresses). Let's choose the private subnet 192.168.0.0 /21
+
+---------------------------------------------
 TYPE OF NETWORK
 802.11n to support both 5 GHz and 2.4 GHz frequency
+
+---------------------------------------------
+SECURITY
+Obviously WPA2 Enterprise. The authentication will be handed to the Wireless Controller server (details below)
+
+---------------------------------------------
+WIRELESS ACCESS POINTS
+- We'll use WAP121 because that's the only thing we know how to use
+- Price: €64 each at <https://www.amazon.de/Cisco-WAP121-K9-G5-Wireless-N-Rangebooster/dp/B007VKMNLQ>
+
+NETWORK MANAGEMENT
+- All APs are managed using a Cisco Virtual Wireless Controller <https://www.cisco.com/c/en/us/products/collateral/wireless/virtual-wireless-controller/data_sheet_c78-714543.html>. Features include:
+	+ Rogue detection
+	+ Wireless intrusion prevention system (wIPS)
+	+ Small Scale Image supports 200 APs and 6000 clients
+	+ RF Management: Real-time and historical RF interference impacting network performance
+	+ Seamelss layer 2 roaming
+	+ Secure guess access
+	+ APs will continue to function even when a controller falis; provides failover to another backup controller
+	+ Organizations may choose to turn off AP radios to reduce power consumption when not in use.
+
+- Requirement: Any x86 server, requiring 2 GB of memory and 8 GB of storage
+
+- Cost: You can buy one license for 5 APs for €444 at <http://www.zones.com/site/product/index.html?id=004322678&page_name=product_alert>
 
 ---------------------------------------------
 SPEED TESTING
@@ -10,7 +52,7 @@ speed = 80 / t (Mbps)
 
 ---------------------------------------------
 HEAT MAP: SIGNAL STRENGTH & SPEED
-(This was tested on the Cisco AP in the green box, radio type b/g/n, signal strength set to Full 100% (not sure what that means but let's hope it's legal))
+(This was tested on the Cisco WAP121 radio type b/g/n, signal strength set to Full 100% (not sure what that means but let's hope it's legal))
 - Green 1: -48 dbm to -40 dbm
 (First test without clearing channel 3.2 Mbps)
 
@@ -31,8 +73,12 @@ HEAT MAP: THINGS TO NOTE
 - One thing is for certain: the signal is good (in the green) as long as the client is in 10 m range with line-of-sight to the AP
 - The client should still be picking up signals from the AP if the strength is more than -90 dbm (orange)
 
-
-
-
-
+---------------------------------------------
+THINGS TO DO
+- Figure out how much bandwidth an average user need
+- Redundancy plan
+- Use PoE or not?
+- How many offices are in the hallways? How many hallways do we have?
+- Plan the physical connection
+- Plan the channels
 
