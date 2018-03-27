@@ -1,0 +1,38 @@
+TYPE OF NETWORK
+802.11n to support both 5 GHz and 2.4 GHz frequency
+
+---------------------------------------------
+SPEED TESTING
+- Command: ping -n 10 -l 10000 <IP Address>
+
+t = average time/1000
+speed = 80 / t (Mbps)
+
+---------------------------------------------
+HEAT MAP: SIGNAL STRENGTH & SPEED
+(This was tested on the Cisco AP in the green box, radio type b/g/n, signal strength set to Full 100% (not sure what that means but let's hope it's legal))
+- Green 1: -48 dbm to -40 dbm
+(First test without clearing channel 3.2 Mbps)
+
+- Green 2: -56 dbm to -48 dbm
+(First test without clearing channel 1.5 Mbps)
+
+- Green 3: -64 dbm to -56 dbm
+
+- Yellow: -72 dbm to -64 dbm
+(First test without clearing channel 1.1Mbps)
+
+- Orange: -80 to -72dbm
+(First test without clearing channel 0.90Mbps)
+
+---------------------------------------------
+HEAT MAP: THINGS TO NOTE
+- As soon as the line-of-sight is obstructed, the signal strength drops to Yellow (-72 dbm to -64 dbm)
+- One thing is for certain: the signal is good (in the green) as long as the client is in 10 m range with line-of-sight to the AP
+- The client should still be picking up signals from the AP if the strength is more than -90 dbm (orange)
+
+
+
+
+
+
