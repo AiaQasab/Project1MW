@@ -46,8 +46,7 @@ Obviously we will use WPA2 Enterprise. The authentication will be handed to the 
 	+ Visitors will be handed a pre-shared key (should be placed somewhere close to the entrance)
 
 ---------------------------------------------
-NETWORK MANAGEMENT
-- All APs are managed using a Cisco Virtual Wireless Controller <https://www.cisco.com/c/en/us/products/collateral/wireless/virtual-wireless-controller/data_sheet_c78-714543.html>. Features include:
+NETWORK MANAGEMENT- All APs are managed using a Cisco Virtual Wireless Controller <https://www.cisco.com/c/en/us/products/collateral/wireless/virtual-wireless-controller/data_sheet_c78-714543.html>. Features include:
 	+ Rogue detection
 	+ Wireless intrusion prevention system (wIPS)
 	+ Small Scale Image supports 200 APs and 6000 clients
@@ -96,9 +95,9 @@ THINGS TO DO
 - Figure out how much bandwidth an average user need
 - Redundancy plan
 - Use PoE or not?
-- How many offices are in the hallways? How many hallways do we have?
+- How many offices are in the hallways: 8 people in the hallway? How many hallways do we have: 
 - Plan the physical connection and 
 - Plan the network topology using packet tracer
 - Plan the channels: can separate floors affect each other?
-- Can the wireless network talk to the wired network?
+- Can the wireless network talk to the wired network: NO
 
