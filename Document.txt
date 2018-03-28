@@ -64,25 +64,26 @@ NETWORK MANAGEMENT- All APs are managed using a Cisco Virtual Wireless Controlle
 SPEED TESTING
 - Command: ping -n 10 -l 10000 <IP Address>
 
-t = average time/1000
+t = (average time in miliseconds) / 2 (MUST divide by two because it's round trip)
 speed = 80 / t (Mbps)
+Note: 80 is kbps, t is ms, so the result should be divided by one million, which is in Megabit per second
 
 ---------------------------------------------
 HEAT MAP: SIGNAL STRENGTH & SPEED
 (This was tested on the Cisco WAP121 radio type b/g/n, signal strength set to Full 100% (not sure what that means but let's hope it's legal))
 - Green 1: -48 dbm to -40 dbm
-(First test without clearing channel 3.2 Mbps)
+(First test without clearing channel 6.4 Mbps)
 
 - Green 2: -56 dbm to -48 dbm
-(First test without clearing channel 1.5 Mbps)
+(First test without clearing channel 3 Mbps)
 
 - Green 3: -64 dbm to -56 dbm
 
 - Yellow: -72 dbm to -64 dbm
-(First test without clearing channel 1.1Mbps)
+(First test without clearing channel 2.2 Mbps)
 
 - Orange: -80 to -72dbm
-(First test without clearing channel 0.90Mbps)
+(First test without clearing channel 1.8 Mbps)
 
 ---------------------------------------------
 HEAT MAP: THINGS TO NOTE
@@ -92,8 +93,8 @@ HEAT MAP: THINGS TO NOTE
 
 ---------------------------------------------
 EXTRA: TIME SETTINGS
-With wrong time: 1.1 Mbps
-With correct time: 2.6 Mbp
+With wrong time: 2.2 Mbps
+With correct time: 5.2 Mbp
 
 ---------------------------------------------
 CHANNELS
