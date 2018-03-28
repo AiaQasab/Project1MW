@@ -43,7 +43,7 @@ OTHERS
 SECURITY
 Obviously we will use WPA2 Enterprise. The authentication will be handed to the Wireless Controller server (details below), the main idea is:
 	+ Student/Staff uses XAMK's user database
-	+ Visitors will be handed a pre-shared key (should be placed somewhere close to the entrance)
+9	+ Visitors will be handed a pre-shared key (should be placed somewhere close to the entrance)
 
 ---------------------------------------------
 NETWORK MANAGEMENT- All APs are managed using a Cisco Virtual Wireless Controller <https://www.cisco.com/c/en/us/products/collateral/wireless/virtual-wireless-controller/data_sheet_c78-714543.html>. Features include:
@@ -91,13 +91,22 @@ HEAT MAP: THINGS TO NOTE
 - The client should still be picking up signals from the AP if the strength is more than -90 dbm (orange)
 
 ---------------------------------------------
+EXTRA: TIME SETTINGS
+With wrong time: 1.1 Mbps
+With correct time: 2.6 Mbp
+
+---------------------------------------------
+CHANNELS
+The APs can auto-select the best channel, no need manually configure
+
+---------------------------------------------
 THINGS TO DO
 - Figure out how much bandwidth an average user need
 - Redundancy plan
 - Use PoE or not?
-- How many offices are in the hallways: 8 people in the hallway? How many hallways do we have: 
+- How many offices are in the hallways: 8 people in the hallway? How many hallways do we have: 9 (3 each floor)
 - Plan the physical connection and 
 - Plan the network topology using packet tracer
-- Plan the channels: can separate floors affect each other?
+- Plan the channels: can separate floors affect each other: conclusively no: on the same floor it's green, on the first floor it's orange, on the third floor it's red. BUT the signal speed does't change much
 - Can the wireless network talk to the wired network: NO
 
