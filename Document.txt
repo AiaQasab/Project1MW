@@ -1,12 +1,13 @@
 ---------------------------------------------
 REQUIREMENTS
 - We want to cover the A, B, and D section
-- The areas of interest can be divided into these categories: the lobbies (3), the classes (5), the hallways (6) and the hall (1)
+- The areas of interest can be divided into these categories: the lobbies (3), the classes (5), the hallways (9) and the hall (1)
 - There can be maximum 20 users in the lobbies
 - There can be maximum 40 users in the classes
 - There can be maximum 110 users in the hall
-- The hallway's APs must support people in the offices (how many?)
+- The hallway's APs must support maximum 8 users in the offices
 - Type of traffic: casual email and web browsing, mainly to provide portable Internet connectivity
+- Let's estimate that we need 1 AP per 20 users
 - Additionally, there are two types of users: Student/Staff and Visitors
 
 ------------------------------------------------------------------------------------------
@@ -27,10 +28,10 @@ LAYER 3
 ---------------------------------------------
 IP ADDRESSING
 - Of course we'll need DHCP
-- Maximum capacity: 20*3 + 40*5 + 110 + 5*6 = 640 users (subjected to change)
-- Suppose each user needs two devices, we need 640*2 = 1280 IP addresses
-- Therefore, we need mask /21 (supporting 2046 unique addresses). Let's choose the private subnet 192.168.0.0 /21
-- There are two VLANs to accomodate two types of users: Student/Staff and Visitors. Each will have a /22 subnet.
+- Maximum capacity: 20*3 + 40*5 + 110 + 9*8 = 442 users (subjected to change)
+- Suppose each user needs two devices, we need 640*2 = 884 IP addresses
+- Therefore, we need mask /22 (supporting 1022 unique addresses). Let's choose the private subnet 192.168.0.0 /22
+- There are two VLANs to accomodate two types of users: Student/Staff and Visitors. Each will have a /23 subnet.
 
 ---------------------------------------------
 DEFAULT GATEWAY
