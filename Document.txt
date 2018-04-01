@@ -3,8 +3,8 @@ REQUIREMENTS
 - We want to cover the A, B, and D section
 - The areas of interest can be divided into these categories: the lobbies (3), the classes (5), the hallways (9) and the hall (1)
 - There can be maximum 20 users in the lobbies
-- There can be maximum 40 users in the classes
-- There can be maximum 110 users in the hall
+- There can be maximum 40 users in the classes. There are computers connecting to the wired network.
+- There can be maximum 110 users in the hall. This area needs extra care because there is simply no wired devices.
 - The hallway's APs must support maximum 8 users in the offices
 - Type of traffic: casual email and web browsing, mainly to provide portable Internet connectivity
 - Let's estimate that we need 1 AP per 20 users
@@ -15,7 +15,9 @@ LAYER 1
 
 ---------------------------------------------
 TYPE OF NETWORK
-802.11n to support both 5 GHz and 2.4 GHz frequency
+802.11n supporting 2.4 GHz frequency. One except is in the hall where 802.11ac must be added to boost speed and reduce interference.
+
+Almost all devices support 2.4 GHz (except devices that use 802.11a from 1999). There is absolutely no need to worry about 5 GHz compatibility.
 
 ---------------------------------------------
 WIRELESS ACCESS POINTS
@@ -44,7 +46,7 @@ OTHERS
 SECURITY
 Obviously we will use WPA2 Enterprise. The authentication will be handed to the Wireless Controller server (details below), the main idea is:
 	+ Student/Staff uses XAMK's user database
-9	+ Visitors will be handed a pre-shared key (should be placed somewhere close to the entrance)
+	+ Visitors will be handed a pre-shared key (should be placed somewhere close to the entrance)
 
 ---------------------------------------------
 NETWORK MANAGEMENT- All APs are managed using a Cisco Virtual Wireless Controller <https://www.cisco.com/c/en/us/products/collateral/wireless/virtual-wireless-controller/data_sheet_c78-714543.html>. Features include:
@@ -113,4 +115,4 @@ THINGS TO DO
 - Can the wireless network talk to the wired network: NO
 - Try pinging with larger packets
 - Try experimenting with time settings again: I haven't found any resources mentioning wrong time affecting throughput
-- In the auditorium: trying doing something with the 5 GHz frequency band.
+- In the hall: trying doing something with the 5 GHz frequency band.
