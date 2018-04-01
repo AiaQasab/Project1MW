@@ -15,14 +15,18 @@ LAYER 1
 
 ---------------------------------------------
 TYPE OF NETWORK
-802.11n supporting 2.4 GHz frequency. One except is in the hall where 802.11ac must be added to boost speed and reduce interference.
+802.11n supporting 2.4 GHz frequency. One exception is in the hall where 802.11ac using 5 GHz must be added to boost speed and reduce interference.
 
-Almost all devices support 2.4 GHz (except devices that use 802.11a from 1999). There is absolutely no need to worry about 5 GHz compatibility.
+Almost all devices nowadays support 2.4 GHz (except devices that use 802.11a from 1999). There is absolutely no need to worry about "5 GHz compatibility".
 
 ---------------------------------------------
 WIRELESS ACCESS POINTS
-- We'll use WAP121 because that's the only thing we know how to use
-- Price: €64 each at <https://www.amazon.de/Cisco-WAP121-K9-G5-Wireless-N-Rangebooster/dp/B007VKMNLQ>
+- Products:
+	+ For the normal 802.11n 2.4 GHz band We'll use WAP121 because it's affordable
+	+ In the hall, we will use those along with two WAP150 for extra speed.
+- Price:
+	+ WAP121 €64 each at <https://www.amazon.de/Cisco-WAP121-K9-G5-Wireless-N-Rangebooster/dp/B007VKMNLQ>.
+	+ WAP150 €100 each at <https://www.amazon.com/Cisco-WAP150-K9-NA-Wireless-Network/dp/B01BY83SO6>.
 
 ------------------------------------------------------------------------------------------
 LAYER 3
@@ -49,7 +53,7 @@ Obviously we will use WPA2 Enterprise. The authentication will be handed to the 
 	+ Visitors will be handed a pre-shared key (should be placed somewhere close to the entrance)
 
 ---------------------------------------------
-NETWORK MANAGEMENT- All APs are managed using a Cisco Virtual Wireless Controller <https://www.cisco.com/c/en/us/products/collateral/wireless/virtual-wireless-controller/data_sheet_c78-714543.html>. Features include:
+NETWORK MANAGEMENT- All Cisco APs are managed using a Cisco Virtual Wireless Controller <https://www.cisco.com/c/en/us/products/collateral/wireless/virtual-wireless-controller/data_sheet_c78-714543.html>. Features include:
 	+ Rogue detection
 	+ Wireless intrusion prevention system (wIPS)
 	+ Small Scale Image supports 200 APs and 6000 clients
