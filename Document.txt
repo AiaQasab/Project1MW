@@ -33,6 +33,15 @@ WIRELESS ACCESS POINTS
 - Price:
 	+ WAP121 €64 each at <https://www.amazon.de/Cisco-WAP121-K9-G5-Wireless-N-Rangebooster/dp/B007VKMNLQ>.
 	+ WAP150 €100 each at <https://www.amazon.com/Cisco-WAP150-K9-NA-Wireless-Network/dp/B01BY83SO6>.
+	
+---------------------------------------------
+SWITCH
+- Product (1): Cisco Catalyst 3650-48P Layer 3 Switch (WS-C3650-48PS-S)
+- Feature:
+	+ 48 Gigabit Power over Ethernet ports (which is very handy)
+	+ Integrated wireless controller (probably has to buy additional license)
+- Placement: It is very possible to place only one switch on the second floor in Wing A and it can connect APs for the entire building.
+Price: €2200 (plus software license, which I can't find information on) at <https://www.amazon.com/Cisco-Catalyst-3650-48P-Switch-WS-C3650-48PS-S/dp/B00FWJ82DQ>
 
 ------------------------------------------------------------------------------------------
 LAYER 3
@@ -61,21 +70,6 @@ SECURITY
 Obviously we will use WPA2 Enterprise. The authentication will be handed to the Wireless Controller server (details below), the main idea is:
 	+ Student/Staff uses XAMK's user database
 	+ Visitors will be handed a pre-shared key (should be placed somewhere close to the entrance)
-
----------------------------------------------
-NETWORK MANAGEMENT- All Cisco APs are managed using a Cisco Virtual Wireless Controller <https://www.cisco.com/c/en/us/products/collateral/wireless/virtual-wireless-controller/data_sheet_c78-714543.html>. Features include:
-	+ Rogue detection
-	+ Wireless intrusion prevention system (wIPS)
-	+ Small Scale Image supports 200 APs and 6000 clients
-	+ RF Management: Real-time and historical RF interference impacting network performance
-	+ Seamelss layer 2 roaming
-	+ Secure guess access
-	+ APs will continue to function even when a controller falis; provides failover to another backup controller
-	+ Organizations may choose to turn off AP radios to reduce power consumption when not in use.
-
-- Requirement: Any x86 server, requiring 2 GB of memory and 8 GB of storage
-
-- Cost: You can buy one license for 5 APs for €444 at <http://www.zones.com/site/product/index.html?id=004322678&page_name=product_alert>
 
 ---------------------------------------------
 SPEED TESTING
