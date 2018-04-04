@@ -43,7 +43,11 @@ IP ADDRESSING
 - Maximum capacity: 20*3 + 40*5 + 110 + 9*8 = 442 users (subjected to change)
 - Suppose each user needs two devices, we need 640*2 = 884 IP addresses
 - Therefore, we need mask /22 (supporting 1022 unique addresses). Let's choose the private subnet 192.168.0.0 /22
-- There are two VLANs to accomodate two types of users: Student/Staff and Visitors. Each will have a /23 subnet.
+- There are 4 VLANs:
+	+ Student (mask /23, maximum 510 hosts)
+	+ Visitor (mask /24, maximum 254 hosts)
+	+ Staff (mask /25, maximum 126 hosts)
+	+ Management (mask /25, maximum 126 hosts)
 
 ---------------------------------------------
 DEFAULT GATEWAY
