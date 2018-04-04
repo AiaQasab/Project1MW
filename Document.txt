@@ -53,10 +53,10 @@ IP ADDRESSING
 - Suppose each user needs two devices, we need 640*2 = 884 IP addresses
 - Therefore, we need mask /22 (supporting 1022 unique addresses). Let's choose the private subnet 192.168.0.0 /22
 - There are 4 VLANs:
-	+ Student (mask /23, maximum 510 hosts)
-	+ Visitor (mask /24, maximum 254 hosts)
-	+ Staff (mask /25, maximum 126 hosts)
-	+ Management (mask /25, maximum 126 hosts)
+	+ Student: mask /23, maximum 510 hosts
+	+ Visitor: mask /24, maximum 254 hosts
+	+ Staff: mask /25, maximum 126 hosts
+	+ Management (for network administrators): mask /25, maximum 126 hosts
 
 ---------------------------------------------
 DEFAULT GATEWAY
@@ -106,6 +106,7 @@ HEAT MAP: THINGS TO NOTE
 EXTRA: TIME SETTINGS
 With wrong time: 2.2 Mbps
 With correct time: 5.2 Mbps
+Later experiments find a 25% difference in speed of correct time vs incorrect time
 
 ---------------------------------------------
 CHANNELS
@@ -116,6 +117,4 @@ CHANNELS
 THINGS TO DO
 - Plan the physical connection 
 - Plan the network topology using packet tracer
-- Try pinging with larger packets: maybe the overhead will be reduced
-- Try experimenting with time settings again: I haven't found any resources mentioning wrong time affecting throughput
-- Layer 3 Routing between VLANs
+- Choose a router
