@@ -60,7 +60,7 @@ IP ADDRESSING
 
 ---------------------------------------------
 DEFAULT GATEWAY
-- There shoud be two routers that act as default gateways using Hot Standby Routing Protocol in case of failure
+- There shoud be two routers that act as default gateways using Hot Standby Routing Protocol in case of failure.
 
 ------------------------------------------------------------------------------------------
 OTHERS
@@ -109,18 +109,13 @@ With correct time: 5.2 Mbps
 
 ---------------------------------------------
 CHANNELS
-The APs can auto-select the best channel, no need manually configure
+- The APs can auto-select the best channel, no need manually configure
+- Between floors: on the same floor it's green, on the first floor it's orange, on the third floor it's red. BUT the signal speed does't change much. Any radio, specifically Access Points stronger than −85dBm on same channel equals Co-Channel Interference (referenced <https://www.wlanpros.com/one-access-point-per-classroom-approach-wrong-2/>). So there absolutely should be co-channel interference between floors if we don't plan carefully enough.
 
 ---------------------------------------------
 THINGS TO DO
-- Figure out how much bandwidth an average user need
-- Redundancy plan
-- Use PoE or not?
-- How many offices are in the hallways: 8 people in the hallway? How many hallways do we have: 9 (3 each floor)
-- Plan the physical connection and 
+- Plan the physical connection 
 - Plan the network topology using packet tracer
-- Plan the channels: can separate floors affect each other: (conclusively no: on the same floor it's green, on the first floor it's orange, on the third floor it's red. BUT the signal speed does't change much). SCRATCH THAT! Any radio – but specifically Access Points stronger than −85dBm on same channel equals Co-Channel Interference (referenced https://www.wlanpros.com/one-access-point-per-classroom-approach-wrong-2/). So there absolutely should be co-channel interference between floors if we don't plan carefully enough.
-- Can the wireless network talk to the wired network: NO
-- Try pinging with larger packets
+- Try pinging with larger packets: maybe the overhead will be reduced
 - Try experimenting with time settings again: I haven't found any resources mentioning wrong time affecting throughput
-- In the hall: trying doing something with the 5 GHz frequency band.
+- Layer 3 Routing between VLANs
