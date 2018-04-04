@@ -10,6 +10,12 @@ REQUIREMENTS
 - Let's estimate that we need 1 AP per 20 users
 - Additionally, there are two types of users: Student/Staff and Visitors
 
+---------------------------------------------
+BUILDING FEATURES
+- Two Ethernet connections that will give us access to the Internet are located in the wiring closet in the first floor of Wing A (room MA11)
+- There are two wiring closets in each floor (one for Wing A and one for Wing B). They're all connected
+- We must provide cabling to the APs.
+
 ------------------------------------------------------------------------------------------
 LAYER 1
 
