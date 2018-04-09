@@ -56,7 +56,8 @@ IP ADDRESSING
 	+ Student: mask /23, maximum 510 hosts
 	+ Visitor: mask /24, maximum 254 hosts
 	+ Staff: mask /25, maximum 126 hosts
-	+ Management (for network administrators): mask /25, maximum 126 hosts
+	+ Management (for network administrators): mask /26, maximum 62 hosts
+	+ (there is still one /26 subnet left for free)
 
 ---------------------------------------------
 DEFAULT GATEWAY
