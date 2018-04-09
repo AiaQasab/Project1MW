@@ -27,15 +27,17 @@ Almost all devices nowadays support 2.4 GHz (except devices that use 802.11a fro
 
 ---------------------------------------------
 WIRELESS ACCESS POINTS
-- Products:
+- Products (28 total):
 	+ For the normal 802.11n 2.4 GHz band We'll use WAP121 because it's affordable
 	+ In the hall, we will use those along with two WAP150 for extra speed.
 - Price:
 	+ WAP121 €64 each at <https://www.amazon.de/Cisco-WAP121-K9-G5-Wireless-N-Rangebooster/dp/B007VKMNLQ>.
 	+ WAP150 €100 each at <https://www.amazon.com/Cisco-WAP150-K9-NA-Wireless-Network/dp/B01BY83SO6>.
 	
+------------------------------------------------------------------------------------------
+LAYER 2
 ---------------------------------------------
-SWITCH
+SWITCH (1)
 - Product (1): Cisco Catalyst 3650-48P Layer 3 Switch (WS-C3650-48PS-S)
 - Feature:
 	+ 48 Gigabit Power over Ethernet ports (which is very handy)
@@ -46,6 +48,7 @@ Price: €2200 (plus software license, which I can't find information on) at <ht
 ------------------------------------------------------------------------------------------
 LAYER 3
 
+Routers: 4431 cisco router for default gateway ($4,500.00 ), 4331 cisco router for backup($1,295.00).
 ---------------------------------------------
 IP ADDRESSING
 - Of course we'll need DHCP
@@ -115,6 +118,3 @@ CHANNELS
 
 ---------------------------------------------
 THINGS TO DO
-- Plan the physical connection 
-- Plan the network topology using packet tracer
-- Choose a router
