@@ -48,7 +48,7 @@ Price: €2200 (plus software license, which I can't find information on) at <ht
 ------------------------------------------------------------------------------------------
 LAYER 3
 
-Routers: 4431 cisco router for default gateway ($4,500.00 ), 4331 cisco router for backup($1,295.00).
+Routers: 4431 cisco router for default gateway (3,668.06€), 4331 cisco router for backup(1,055.65€).
 ---------------------------------------------
 IP ADDRESSING
 - Of course we'll need DHCP
