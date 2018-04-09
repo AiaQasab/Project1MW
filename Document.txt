@@ -7,7 +7,7 @@ REQUIREMENTS
 - There can be maximum 110 users in the hall. This area needs extra care because there is simply no wired devices.
 - The hallway's APs must support maximum 8 users in the offices
 - Type of traffic: casual email and web browsing, mainly to provide portable Internet connectivity
-- Let's estimate that we need 1 AP per 20 users
+- Let's estimate that we need 1 AP per 20 HEAVY users
 - Additionally, there are two types of users: Student/Staff and Visitors
 
 ---------------------------------------------
@@ -21,7 +21,7 @@ LAYER 1
 
 ---------------------------------------------
 TYPE OF NETWORK
-802.11n supporting 2.4 GHz frequency. One exception is in the hall where 802.11ac using 5 GHz must be added to boost speed and reduce interference.
+802.11n supporting 2.4 GHz frequency.
 
 Almost all devices nowadays support 2.4 GHz (except devices that use 802.11a from 1999). There is absolutely no need to worry about "5 GHz compatibility".
 
@@ -29,10 +29,8 @@ Almost all devices nowadays support 2.4 GHz (except devices that use 802.11a fro
 WIRELESS ACCESS POINTS
 - Products (28 total):
 	+ For the normal 802.11n 2.4 GHz band We'll use WAP121 because it's affordable
-	+ In the hall, we will use those along with two WAP150 for extra speed.
 - Price:
 	+ WAP121 €64 each at <https://www.amazon.de/Cisco-WAP121-K9-G5-Wireless-N-Rangebooster/dp/B007VKMNLQ>.
-	+ WAP150 €100 each at <https://www.amazon.com/Cisco-WAP150-K9-NA-Wireless-Network/dp/B01BY83SO6>.
 	
 ------------------------------------------------------------------------------------------
 LAYER 2
@@ -48,11 +46,10 @@ Price: €2200 (plus software license, which I can't find information on) at <ht
 ------------------------------------------------------------------------------------------
 LAYER 3
 
-Routers: 4431 cisco router for default gateway (3,668.06€), 4331 cisco router for backup(1,055.65€).
 ---------------------------------------------
 IP ADDRESSING
 - Of course we'll need DHCP
-- Maximum capacity: 20*3 + 40*5 + 110 + 9*8 = 442 users (subjected to change)
+- Maximum capacity: 20*3 + 40*5 + 110 + 9*8 = 442 users
 - Suppose each user needs two devices, we need 640*2 = 884 IP addresses
 - Therefore, we need mask /22 (supporting 1022 unique addresses). Let's choose the private subnet 192.168.0.0 /22
 - There are 4 VLANs:
@@ -64,6 +61,9 @@ IP ADDRESSING
 ---------------------------------------------
 DEFAULT GATEWAY
 - There shoud be two routers that act as default gateways using Hot Standby Routing Protocol in case of failure.
+- Product:
+	+ One 4431 cisco router for default gateway: €3,668.06
+	+ One 4331 cisco router for backup: €1,055.65.
 
 ------------------------------------------------------------------------------------------
 OTHERS
@@ -73,6 +73,9 @@ SECURITY
 Obviously we will use WPA2 Enterprise. The authentication will be handed to the Wireless Controller server (details below), the main idea is:
 	+ Student/Staff uses XAMK's user database
 	+ Visitors will be handed a pre-shared key (should be placed somewhere close to the entrance)
+
+------------------------------------------------------------------------------------------
+EXPERIMENTATION & RESEARCH
 
 ---------------------------------------------
 SPEED TESTING
@@ -106,15 +109,6 @@ HEAT MAP: THINGS TO NOTE
 - The client should still be picking up signals from the AP if the strength is more than -90 dbm (orange)
 
 ---------------------------------------------
-EXTRA: TIME SETTINGS
-With wrong time: 2.2 Mbps
-With correct time: 5.2 Mbps
-Later experiments find a 25% difference in speed of correct time vs incorrect time
-
----------------------------------------------
 CHANNELS
 - The APs can auto-select the best channel, no need manually configure
 - Between floors: on the same floor it's green, on the first floor it's orange, on the third floor it's red. BUT the signal speed does't change much. Any radio, specifically Access Points stronger than −85dBm on same channel equals Co-Channel Interference (referenced <https://www.wlanpros.com/one-access-point-per-classroom-approach-wrong-2/>). So there absolutely should be co-channel interference between floors if we don't plan carefully enough.
-
----------------------------------------------
-THINGS TO DO
